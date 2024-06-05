@@ -19,7 +19,8 @@ console.log('port is: ', process.env.CARE_URL);
 router.get('/', async (req, res) => {
     //Inside default to get the product list from care route
     //to test without auth0
-    // console.log('Reached product urlß');
+    console.log('Reached product urlß');
+    console.log('process.env.CARE_URL', process.env.CARE_URL);
     try{
         const productData = await axiosObject.get(process.env.CARE_URL);
         res.status(200).json({data:productData.data.data}); 
