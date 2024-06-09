@@ -24,6 +24,6 @@ app.get('/', (req, res) => {
 const products = require('./api-route/product');
 app.use('/product', products);
 
-app.listen(process.env.PORT, () => {
-    console.log(`server listening on port ${process.env.PORT}`)
+app.listen(process.env.BACKEND_PORT, () => {
+    console.log(`server listening on port ${process.env.BACKEND_PORT}`)
 })
